@@ -15,6 +15,24 @@ function ajax(){
                     output +="<input type='checkbox' id='ch'>"+response[i].title+"</input> <br>" ;
             
                 }
+            
+             var check= new Promise(function(resolve){
+        $(document).ready(function(){
+        $(`input[type=checkbox]`).on(`change`,function() {
+        
+        if ($(`input[type=checkbox]:checked`).length >=5) 
+            {
+                $(this).prop('checked',true);
+                resolve("Congratulations...5 tasks have been successfully completed");
+            }
+       
+             });
+    
+         })
+    
+    });
+     check.then(function(done){alert(done);});
+    }
                   
             
                 
