@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+</head>
+<body>
+  <div id="tblFruits">
+<input type="checkbox" name="ch1" onclick = "return Validate()" >
+<input type="checkbox" name="ch2" onclick = "return Validate()">
+<input type="checkbox" name="ch3" onclick = "return Validate()">
+<input type="checkbox" name="ch4" onclick = "return Validate()">
+<input type="checkbox" name="ch5" onclick = "return Validate()">
+<input type="checkbox" name="ch6" onclick = "return Validate()">
+<!-- <input type = "button" value = "Check" onclick = "return Validate()" /> -->
+</div>
+
+<script type="text/javascript">
+  function Validate() {
+      var checked = 0;
+
+      //Reference the Table.
+      var tblFruits = document.getElementById("tblFruits");
+
+      //Reference all the CheckBoxes in Table.
+      var chks = tblFruits.getElementsByTagName("input");
+
+      //Loop and count the number of checked CheckBoxes.
+      for (var i = 0; i < chks.length; i++) {
+          if (chks[i].checked) {
+              checked++;
+          }
+      }
+
+      if (checked == 5) {
+          alert(checked + " CheckBoxe(s) are checked.");
+          return true;
+      } 
+  };
+</script>
+</body>
+</html>
