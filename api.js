@@ -16,7 +16,14 @@ function ajax(){
             
                 }
             
-             var check= new Promise(function(resolve){
+           
+                  
+            
+                
+            }
+            chk.innerHTML=output;
+        
+  var check= new Promise(function(resolve){
         $(document).ready(function(){
         $(`input[type=checkbox]`).on(`change`,function() {
         
@@ -33,13 +40,6 @@ function ajax(){
     });
      check.then(function(done){alert(done);});
     }
-                  
-            
-                
-            }
-            chk.innerHTML=output;
-        }
-
       
     
     
